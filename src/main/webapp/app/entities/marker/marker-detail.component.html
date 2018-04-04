@@ -1,0 +1,38 @@
+
+<div *ngIf="marker">
+    <h2><span>Marker</span> {{marker.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Point X</span></dt>
+        <dd>
+            <span>{{marker.pointX}}</span>
+        </dd>
+        <dt><span>Point Y</span></dt>
+        <dd>
+            <span>{{marker.pointY}}</span>
+        </dd>
+        <dt><span>Marker Code</span></dt>
+        <dd>
+            <span>{{marker.markerCode}}</span>
+        </dd>
+        <dt><span>Beacon Code</span></dt>
+        <dd>
+            <span>{{marker.beaconCode}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'marker/'+ marker.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>

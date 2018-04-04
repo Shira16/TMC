@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "pointX",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "pointY",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "markerCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "beaconCode",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180404164553",
+    "entityTableName": "marker",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

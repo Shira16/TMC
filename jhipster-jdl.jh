@@ -1,0 +1,34 @@
+entity Marker {
+	pointX Double, //postgres doesnt accept Point type
+    pointY Double,
+	markerCode String,
+    beaconCode String
+}
+
+entity RouteOne { //try changing name of entity
+	abbr String,
+    name String
+}
+
+entity ControlPoint {
+	ordinal String
+}
+
+entity AssociatedPoint {
+	
+}
+
+relationship ManyToOne {
+	ControlPoint{marker} to Marker
+}
+
+relationship ManyToOne {
+	ControlPoint{route} to RouteOne
+}
+
+relationship ManyToOne {
+	AssociatedPoint{associated} to ControlPoint
+}
+
+service all with serviceImpl
+dto * with mapstruct
