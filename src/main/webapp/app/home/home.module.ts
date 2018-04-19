@@ -20,3 +20,6 @@ import { HOME_ROUTE, HomeComponent } from './';
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TmcHomeModule {}
+// proxy do geoservera - zabezpieczyc wejscie przez url, poczytac o uwierzytelnianiu
+// openlayers
+// stylizacja mapy - przesuwanie etykietek wfs
